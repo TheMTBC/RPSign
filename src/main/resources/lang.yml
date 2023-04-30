@@ -1,0 +1,7 @@
+sign:
+  invalid-service: '&cНеверный сервис'
+  invalid-pack: '&cНеверный ресурспак'
+  loading: '&aЗагрузка'
+  download: '&aСкачать'
+  download-name: '&d%s'
+  download-click: '&aКликни на меня'

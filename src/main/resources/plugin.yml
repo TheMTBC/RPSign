@@ -1,0 +1,7 @@
+name: RPSign
+version: '${version}'
+main: com.github.laefye.rpsign.RPSign
+api-version: 1.19
+depend:
+  - Kublik
+author: Laefye
