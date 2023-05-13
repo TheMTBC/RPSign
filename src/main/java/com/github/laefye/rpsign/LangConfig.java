@@ -1,6 +1,5 @@
 package com.github.laefye.rpsign;
 
-import com.github.laefye.kublik.text.Text;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
@@ -29,7 +28,7 @@ public class LangConfig {
             return path;
         }
         var str = config.getString(path);
-        return Text.format(str == null ? "" : str);
+        return plugin.getKublik().getText().format(str == null ? "" : str);
     }
 }
 

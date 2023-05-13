@@ -15,27 +15,14 @@ repositories {
         name = "sonatype"
         url = "https://oss.sonatype.org/content/groups/public/"
     }
+    maven {
+        url "https://maven.picraft.ru/releases"
+    }
 }
 
 dependencies {
-    compileOnly "org.spigotmc:spigot-api:1.19.2-R0.1-SNAPSHOT"
-    compileOnly files("libs/Kublik-1.0.0.jar")
-}
-
-def targetJavaVersion = 17
-java {
-    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
-    sourceCompatibility = javaVersion
-    targetCompatibility = javaVersion
-    if (JavaVersion.current() < javaVersion) {
-        toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
-    }
-}
-
-tasks.withType(JavaCompile).configureEach {
-    if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
-        options.release = targetJavaVersion
-    }
+    compileOnly "org.spigotmc:spigot-api:1.19.3-R0.1-SNAPSHOT"
+    compileOnly "com.github.laefye.kublik:API:1.0.0"
 }
 
 processResources {
